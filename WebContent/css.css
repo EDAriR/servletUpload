@@ -1,0 +1,14 @@
+.upload{
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+.dlete{
+    width: 300px;
+    height: 300px;
+}
+pre{
+    font-family: "Comic Sans MS";
+    font-size: 0.1 em;
+    background: #94ff96;
+}

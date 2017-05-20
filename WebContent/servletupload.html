@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="BIG5">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="upload" method="post" enctype="multipart/form-data">
+        <input type="file" class="fid" name="fid" onchange=""><br>
+        <input type="file" class="fid" name="fid" onchange=""><br>
+        <input type="file" class="fid" name="fid" onchange=""><br>
+
+        <div id="pre">
+            <img src="" alt="" id="preview">
+        </div>
+
+        <button type="submit" >submit</button>
+        <button type="reset" >reset</button>
+    </form>
+
+</body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+    /*other*/
+    $(function()
+    {
+        $(".fid").change(function(){
+            if (this.files && this.files[0]) {
+                reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#preview').attr('src', e.target.result).appendTo('#pre');
+                };
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    }) ;
+</script>
+</html>
